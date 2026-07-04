@@ -13,7 +13,7 @@ age = input("Enter your age: ")
 # "abc" -> ?
 
 # f-string
-# print(f"{name} your age is {int(age) + 10}")
+print(f"{name} your age is {int(age) + 10}")
 
 # Concatination
-# print(name + " your age is " + age)
+print(name + " your age is " + age)

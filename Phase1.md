@@ -683,5 +683,5 @@ if __name__ == "__main__":
 | **Input/Output** | `input()`, `print()`, f-strings              | Getting user input, showing results            |
 | **Functions**    | Reusable code, parameters, return values     | When you need to repeat logic, organize code   |
 | **Conditions**   | `if-elif-else`, logical operators            | Making decisions based on data                 |
-
+18
 **Remember:** Practice is key! Start with small programs and gradually add complexity. Every professional developer started exactly where you are now. Happy coding! 🚀

@@ -10,9 +10,18 @@
 
 # print("I am out of the conditional blocks")
 
-name = input("Enter your name: ")
+# name = input("Enter your name: ")
 
-if len(name) < 3:
-    print("Your name is not correct.")
+# if len(name) < 3:
+#     print("Your name is not correct.")
+# else:
+#     print(f"Hello, {name}")
+
+weather = "Cloudy"
+
+if weather == "Rainy":
+  print("Take an umbrella")
+elif weather == "Windy":
+  print("So stay at home")
 else:
-    print(f"Hello, {name}")
+  print("Then you have no choice, but to go to work")
