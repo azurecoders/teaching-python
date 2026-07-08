@@ -3,11 +3,16 @@
 names = ["Muzammil", "Ahmed", "Nadeem"]
 # numbers = [1,2,3,4,5,6,7,8,9]
 
-def greet(name):
-  print(f"Hello, {name}")
+# names[0] = "Ibrahim"
+# print(names)
 
-for name in names:
-  greet(name)
+
+def greet(name):
+    print(f"Hello, {name}")
+
+
+# for name in names:
+# greet(name)
 # Indexes always starts from 0
 
 # print(names[0]) # Start of the list
