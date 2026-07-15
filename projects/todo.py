@@ -87,6 +87,17 @@ def delete_task():
     view_task()
 
 
+def task_completed():
+    view_task()
+    print("=== Enter the number to update the task ===")
+    index = int(input("Enter the number: "))
+    print(f"You are going to update {index}")
+    tasks[index - 1]["completed"] = True
+    # dict = tasks[index - 1]
+    # dict["completed"] = True
+    print("Your task has been updated")
+
+
 # view_task()
 # add_task()
 # view_task()
@@ -103,11 +114,12 @@ while True:
     print("1. View Task")
     print("2. Create Task")
     print("3. Delete Task")
-    print("4. Quit")
+    print("4. Update Task")
+    print("5. Quit")
     print("=" * 50)
     print("\n")
 
-    operation = input("Enter the number (1, 2 or 3): ")  # block
+    operation = input("Enter the number (1, 2, 3, 4 or 5): ")  # block
     print(f"You have chosen {operation}")
 
     if int(operation) == 1:
@@ -117,7 +129,75 @@ while True:
     elif int(operation) == 3:
         delete_task()
     elif int(operation) == 4:
+        task_completed()
+    elif int(operation) == 5:
         print("You are going to exit the loop")
         break
     else:
         print("Invalid Operation")
+
+# names = ["Muzammil", "Ahmed"]
+# print("Before Update: ", names)  # Move lines up Alt + Up Arrow
+# names[1] = "Nadeem"
+# print("After Update: ", names)  # Move lines up Alt + Up Arrow
+
+# names = [
+#     {"name": "Muzammil", "age": 19},
+#     {"name": "Ahmed", "age": 24},
+# ]
+
+# Not a best practice
+
+# print(names)
+# names[0] = {"name": "Nadeem", "age": 20}
+# print(names)
+
+# Best practice
+
+# Dictionary -> Key - Value pairs
+
+# dict = {"name": "Muzammil"}
+# print(dict)
+# dict["name"] = "Nadeem"
+# print(dict)
+
+# print(names)
+# names[0]["name"] = "Nadeem"
+# print(names)
+
+# List [] -> Collection of data
+# Dictionary {} -> Extra information in the form of keys and value
+
+# In order to get particular elements from the list we have to use index
+# For example:
+
+# names = ["Muzammil", "Ahmed"]
+# print(names[0])  # We have used 0 as the index to get the first element
+
+# # Now in order to replace the first element (Muzammil -> Nadeem)
+# names[0] = "Nadeem"  # We have updated the first element (Muzammil -> Nadeem)
+# print(names[0])  # Nadeem
+
+# # Dictionary -> Key - Value Pair
+# student = {
+#     "name": "Muzammil"
+# }  # In order to create a dictionary we use "{}", here name is the key and Muzammil is the value
+
+# In order to access the value of (key: name)
+# print(
+#     student["name"]
+# )  # Muzammil, In order to get the value from a dictionary we use the key.
+
+# Now if we need to update the dictionary we can do it like this
+# student["name"] = "Nadeem"  # We have updated the value (Muzammil -> Nadeem)
+# print(student["name"])  # Nadeem
+
+# # In order to get the dictionary from the list
+# names = [
+#     {"name": "Muzammil", "age": 20},
+# ]
+
+# print("Accessing using index: ", names[0])
+# print("Getting the name from the dict: ", names[0]["name"])
+# names[0]["name"] = "Nadeem"
+# print("Getting the name from the dict: (After update) ", names[0]["name"])
